@@ -1,4 +1,4 @@
-class CurrencyInput extends React.component {
+class CurrencyInput extends React.Component {
   render() {
     const { value, handleChange } = this.props;
 
@@ -38,7 +38,7 @@ class CurrencyConverter extends React.Component {
   handleUsdChange(event) {
     const euro = this.convert(event.target.value, this.state.rate, this.toEuro);
     this.setState({
-      usd: input,
+      usd: event.target.value,
       euro,
     });
   }
@@ -46,7 +46,7 @@ class CurrencyConverter extends React.Component {
   handleEuroChange(event) {
     const usd = this.convert(event.target.value, this.state.rate, this.toUsd);
     this.setState({
-      euro: input,
+      euro: event.target.value,
       usd,
     });
   }
