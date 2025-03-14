@@ -6,8 +6,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var CurrencyInput = function (_React$component) {
-  _inherits(CurrencyInput, _React$component);
+var CurrencyInput = function (_React$Component) {
+  _inherits(CurrencyInput, _React$Component);
 
   function CurrencyInput() {
     _classCallCheck(this, CurrencyInput);
@@ -28,10 +28,10 @@ var CurrencyInput = function (_React$component) {
   }]);
 
   return CurrencyInput;
-}(React.component);
+}(React.Component);
 
-var CurrencyConverter = function (_React$Component) {
-  _inherits(CurrencyConverter, _React$Component);
+var CurrencyConverter = function (_React$Component2) {
+  _inherits(CurrencyConverter, _React$Component2);
 
   function CurrencyConverter(props) {
     _classCallCheck(this, CurrencyConverter);
@@ -73,7 +73,7 @@ var CurrencyConverter = function (_React$Component) {
     value: function handleUsdChange(event) {
       var euro = this.convert(event.target.value, this.state.rate, this.toEuro);
       this.setState({
-        usd: input,
+        usd: event.target.value,
         euro: euro
       });
     }
@@ -82,7 +82,7 @@ var CurrencyConverter = function (_React$Component) {
     value: function handleEuroChange(event) {
       var usd = this.convert(event.target.value, this.state.rate, this.toUsd);
       this.setState({
-        euro: input,
+        euro: event.target.value,
         usd: usd
       });
     }
